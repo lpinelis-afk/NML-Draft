@@ -478,9 +478,9 @@ Adds event listeners to the buttons so that when clicked. The following function
 wildcardBtn.addEventListener('click', () => {
   if(SLOTS.includes('Wildcard')){
     SLOTS.splice(SLOTS.indexOf('Wildcard'), 1);
-    alert('The Wildcard role has been removed. You will no longer be able to draft musicians into that slot.');
+    alert('The Wildcard role has been removed. You will no longer need to fill it in your lineup.');
   } else {
-    alert('The Wildcard role is already removed.');
+    alert('The Wildcard role is optional.');
   }
 });
 rulesBtn.addEventListener('click', () => {
