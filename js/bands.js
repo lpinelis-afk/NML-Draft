@@ -56,7 +56,7 @@ const BANDS = [
   {name:"AC/DC", vibe:"classic", members:[["Brian Johnson","Vocals"],["Angus Young","Guitar"],["Cliff Williams","Bass"],["Phil Rudd","Drums"]]},
   {name:"Guns N' Roses", vibe:"classic", members:[["Axl Rose","Vocals"],["Slash","Guitar"],["Duff McKagan","Bass"],["Steven Adler","Drums"]]},
   {name:"Radiohead", vibe:"mellow", members:[["Thom Yorke","Vocals"],["Jonny Greenwood","Guitar"],["Colin Greenwood","Bass"],["Philip Selway","Drums"]]},
-  {name:"Foo Fighters", vibe:"alt", members:[["Dave Grohl","Vocals/Guitar"],["Chris Shiflett","Guitar"],["Nate Mendel","Bass"],["Taylor Hawkins","Drums"]]},
+  {name:"Foo Fighters", vibe:"alt", members:[["Dave Grohl","Vocals/Guitar/Drums"],["Chris Shiflett","Guitar"],["Nate Mendel","Bass"],["Taylor Hawkins","Drums"]]},
   {name:"Smashing Pumpkins", vibe:"alt", members:[["Billy Corgan","Vocals/Guitar"],["James Iha","Guitar"],["D'arcy Wretzky","Bass"],["Jimmy Chamberlin","Drums"]]},
   {name:"Nine Inch Nails", vibe:"theatrical", members:[["Trent Reznor","Vocals"],["Robin Finck","Guitar"],["Atticus Ross","Keys/Production"],["Ilan Rubin","Drums"]]},
   {name:"Primus", vibe:"chaotic", members:[["Les Claypool","Bass/Vocals"],["Larry LaLonde","Guitar"],["Tim Alexander","Drums"]]},
@@ -92,5 +92,7 @@ const BANDS = [
   {name:"Nightwish", vibe:"theatrical", members:[["Floor Jansen","Vocals"],["Emppu Vuorinen","Guitar"],["Jukka Koskinen","Bass"],["Tuomas Holopainen","Keys"],["Kai Hahto","Drums"],["Troy Donockley","Vocals"]]},
   {name:"The Tiger Lillies", vibe:"theatrical", members:[["Martyn Jacques","Vocals/Accordion"],["Adrian Stout","Bass/Vocals"],["Budi Butenop","Drums"]]},
   {name:"Acid Bath", vibe:"aggressive", members:[["Dax Riggs","Vocals"],["Sammy Duet","Guitar"],["Mike Sanchez","Guitar"],["Alex Bergeron","Bass"],["Zack Simmons","Drums"]]},
-  {name:"Leningrad", vibe:"chaotic", members:[["Sergey Shnurov","Vocals"],["Vasily Zubkov","Bass"],["Denis Martynov","Trumpet"],["Alexander Galnykin","Trombone"],["Mikhail Kozodaev","Drums"],["Dmitry Gorevoy","Saxophone"],["Viktor Lushnikov","Keys"]]}
+  {name:"Leningrad", vibe:"chaotic", members:[["Sergey Shnurov","Vocals"],["Vasily Zubkov","Bass"],["Denis Martynov","Trumpet"],["Alexander Galnykin","Trombone"],["Mikhail Kozodaev","Drums"],["Dmitry Gorevoy","Saxophone"],["Viktor Lushnikov","Keys"]]},
+  {name:"Handful of Hate", vibe:"aggressive", members:[["Nicola Bianchi","Guitar/Vocals"],["Andrea Toto","Guitar"],["Luca Buti","Bass"],["Aeternus","Drums"]]},
+  {name:"Angry Somoans", vibe:"punk", members:[["Mike Saunders","Guitar/Vocals"],["Gregg Turner","Guitar/Vocals"],["P.J. Galligan","Guitar"],["Todd Homer","Bass"],["Bill Vockeroth","Drums"]]},
 ];

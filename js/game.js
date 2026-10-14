@@ -413,6 +413,14 @@ function draftMember(btn, name, instr){
 // The final "poster" screen: lineup, score, grade, chemistry log, replay button.
 function renderFinal(){
   const grade = gradeForScore(score);
+  let moneyDisplay = document.getElementById('money-amount');
+  let betDisplay = document.getElementById('bet-number');
+  let bet = parseInt(betDisplay.value, 10);
+  let currentMoney = parseInt(moneyDisplay.textContent, 10);
+  currentMoney = Math.round(currentMoney + (bet**2)/score);
+  moneyDisplay.textContent = currentMoney;
+  const currentBetDisplay = document.getElementById('current-bet');
+  currentBetDisplay.textContent = 0;
   gameArea.innerHTML = `
     <div class="poster">
       <div class="eyebrow2">Now booking world tours</div>
@@ -421,6 +429,9 @@ function renderFinal(){
       <div class="grade">${grade}</div>
       <div id="lineup"></div>
       <div id="clashlog-final"></div>
+      <label for="money">Money:</label>
+      <label id="money-amount">${currentMoney}</label>
+      
 
     </div>
   `;
@@ -466,6 +477,7 @@ Adds the buttons as variables so javascript can listen for clicks and perform ac
 const restartBtn = document.getElementById('restart-btn');
 const rulesBtn = document.getElementById('rules-btn');
 const wildcardBtn = document.getElementById('wildcard-needed-btn');
+const addToBetBtn = document.getElementById('add-to-bet-btn');
 
 
 /*=========================================================================
@@ -478,15 +490,42 @@ Adds event listeners to the buttons so that when clicked. The following function
 wildcardBtn.addEventListener('click', () => {
   if(SLOTS.includes('Wildcard')){
     SLOTS.splice(SLOTS.indexOf('Wildcard'), 1);
-    alert('The Wildcard role has been removed. You will no longer need to fill it in your lineup.');
+    alert('The Wildcard role has been removed. You will no longer be able to draft musicians into that slot.');
   } else {
-    alert('The Wildcard role is optional.');
+    alert('The Wildcard role is already removed.');
   }
 });
 rulesBtn.addEventListener('click', () => {
   alert(`Rules:\n\n1. A random band appears on stage.\n2. Click one member. They are auto-assigned to the first open slot that matches their instrument(s).\n3. Earn "fit" points depending on how far down their instrument list the slot was (main instrument = 100, second = 35, Wildcard = -15).\n4. "Chemistry" points are added/subtracted based on who is already in your lineup (vibe clashes and real-life friendships/feuds).\n5. Fill all 7 slots to see your final grade.`);
 });
+
+addToBetBtn.addEventListener('click', () => {
+  const betAmountInput = document.getElementById('bet-number');
+  const betAmount = parseInt(betAmountInput.value, 10);
+  if (isNaN(betAmount) || betAmount <= 0) {
+    alert('Please enter a valid bet amount greater than 0.');
+    return;
+  }
+  const moneyDisplay = document.getElementById('money-amount');
+  let currentMoney = parseInt(moneyDisplay.textContent, 10);
+  if (betAmount > currentMoney+500) {
+    alert('You do not have enough money to place that bet.');
+    return;
+  }
+  currentMoney -= betAmount;
+  moneyDisplay.textContent = currentMoney;
+  alert(`You have placed a bet of ${betAmount}. Your remaining money is ${currentMoney}.`);
+  const currentBetDisplay = document.getElementById('current-bet');
+  currentBetDisplay.textContent = parseInt(currentBetDisplay.textContent, 10) + betAmount;
+});
+
 restartBtn.addEventListener('click', () => {
+  if (parseInt(document.getElementById('money-amount').textContent, 10) <= 0) {
+    alert('You have gone bankrupt, the only way out is to sell your soul to the devil.');
+    confirm('Make a deal with the devil?') ? alert('You have sold your soul to the devil, you are now a slave to him.') || window.location.reload() : alert('You have refused to sell your soul to the devil.') || alert("You will not be able to continue the game.");
+    window.location.reload();
+    return;
+  }
   resetGame();
   renderSetlist();
   renderScorebar();

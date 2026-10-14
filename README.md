@@ -30,3 +30,4 @@ Open `js/bands.js` and add a line inside `BANDS`:
 - New vibe clash or friendship/feud: add a line in `js/rules.js`.
 - Points per fit level, reroll cost, and grade cutoffs: top of `js/game.js`.
 - Colors: top of `css/style.css`.
+## At one point will use the follwing api: https://musicbrainz.org/doc/MusicBrainz_API
