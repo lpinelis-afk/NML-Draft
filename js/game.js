@@ -53,6 +53,12 @@ const GRADES = [
   {min:-Infinity, label:"Beautiful Disaster"}
 ];
 
+document.addEventListener('DOMContentLoaded', function() {
+  var current_bet = localStorage.getItem('current_bet');
+  var current_money = localStorage.getItem('current_money');
+  document.querySelector('#current-bet').textContent = current_bet;
+  document.querySelector('#money-amount').textContent = current_money;
+});
 
 /* ==========================================================================
    B. SETUP + VALIDATION
@@ -497,14 +503,15 @@ wildcardBtn.addEventListener('click', () => {
     alert('The Wildcard role is already removed.');
   }
 });
+
 rulesBtn.addEventListener('click', () => {
   alert(`Rules:\n\n1. A random band appears on stage.\n2. Click one member. They are auto-assigned to the first open slot that matches their instrument(s).\n3. Earn "fit" points depending on how far down their instrument list the slot was (main instrument = 100, second = 35, Wildcard = -15).\n4. "Chemistry" points are added/subtracted based on who is already in your lineup (vibe clashes and real-life friendships/feuds).\n5. Fill all 7 slots to see your final grade.`);
 });
+
 addToBetBtn.addEventListener('click', () => {
   const betAmountInput = document.getElementById('bet-number');
   const betAmount = parseInt(betAmountInput.value, 10);
-  localStorage.getItem('current_bet', betAmount);
-  localStorage.getItem('current_money', parseInt(document.getElementById('money-amount').value, 10));
+  const currentBetDisplay = document.getElementById('current-bet');
   if (isNaN(betAmount) || betAmount <= 0) {
     alert('Please enter a valid bet amount greater than 0.');
     return;
@@ -538,4 +545,5 @@ if (document.getElementById('current-bet') >= 100) {
   renderScorebar();
   renderRound();
 }
+
 

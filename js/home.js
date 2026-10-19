@@ -10,13 +10,18 @@ if(start_button.getAttribute('value') == 'off'){
 
 localStorage.setItem('current_bet', current_bet);
 place_bet.addEventListener('click', function() {
-    var money = document.querySelector('#money-amount').value;
-    var bet_value = document.querySelector('#current-bet').textContent;
-    var final_pool = parseInt(bet_value) + parseInt(document.querySelector('#bet-number').value);
-    localStorage.setItem('current_bet', final_pool);
-    document.querySelector('#current-bet').textContent = final_pool;
-    start_button.style.display = '';
-    money = parseInt(money) - parseInt(document.querySelector('#bet-number').value);
-    localStorage.setItem('current_money', money);
-    document.querySelector('#money-amount').textContent = money;
-});
+    if (document.querySelector('#bet-number').value >= 100) {
+        var money = document.querySelector('#money-amount').textContent;
+        var bet_value = document.querySelector('#current-bet').textContent;
+        var final_pool = parseInt(bet_value) + parseInt(document.querySelector('#bet-number').value);
+        
+        document.querySelector('#current-bet').textContent = final_pool;
+        start_button.style.display = '';
+        money = parseInt(money) - parseInt(document.querySelector('#bet-number').value);
+        
+        document.querySelector('#money-amount').textContent = money;
+        localStorage.setItem('current_money', money);
+        localStorage.setItem('current_bet', final_pool);
+} else {
+    alert('You must bet at least 100!');
+}});
