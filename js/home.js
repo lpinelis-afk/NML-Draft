@@ -1,0 +1,22 @@
+
+
+var start_button = document.querySelector('#start-game-btn');
+var current_bet = document.querySelector('#current-bet').textContent;
+const place_bet = document.querySelector('#add-to-bet-btn');
+localStorage.getItem('current_bet', current_bet);
+if(start_button.getAttribute('value') == 'off'){
+    start_button.style.display = 'none';
+}
+
+localStorage.setItem('current_bet', current_bet);
+place_bet.addEventListener('click', function() {
+    var money = document.querySelector('#money-amount').value;
+    var bet_value = document.querySelector('#current-bet').textContent;
+    var final_pool = parseInt(bet_value) + parseInt(document.querySelector('#bet-number').value);
+    localStorage.setItem('current_bet', final_pool);
+    document.querySelector('#current-bet').textContent = final_pool;
+    start_button.style.display = '';
+    money = parseInt(money) - parseInt(document.querySelector('#bet-number').value);
+    localStorage.setItem('current_money', money);
+    document.querySelector('#money-amount').textContent = money;
+});

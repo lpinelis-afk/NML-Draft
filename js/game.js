@@ -257,18 +257,20 @@ function renderClashLog(){
 // Redraws the row of slot "tickets". Filled slots show the musician and a
 // fit tag; empty slots are dimmed. The most recent pick gets a highlight.
 function renderSetlist(){
-  setlistEl.innerHTML = '';
-  SLOTS.forEach(slot => {
-    const pick = picks[slot];
-    const stub = document.createElement('div');
-    stub.className = 'stub' + (pick ? '' : ' empty') + (slot === lastFilledSlot ? ' just-filled' : '');
-    if(pick){
-      stub.innerHTML = `<span class="role">${slot}</span><div class="name">${pick.name}</div><div class="band">${pick.band}</div><span class="fit-tag ${pick.fitCls}">${pick.fitLabel}</span>`;
-    } else {
-      stub.innerHTML = `<span class="role">${slot}</span><div class="name">—</div>`;
-    }
-    setlistEl.appendChild(stub);
-  });
+  if (document.getElementById('current-bet') >= 100) {
+    setlistEl.innerHTML = '';
+    SLOTS.forEach(slot => {
+      const pick = picks[slot];
+      const stub = document.createElement('div');
+      stub.className = 'stub' + (pick ? '' : ' empty') + (slot === lastFilledSlot ? ' just-filled' : '');
+      if(pick){
+        stub.innerHTML = `<span class="role">${slot}</span><div class="name">${pick.name}</div><div class="band">${pick.band}</div><span class="fit-tag ${pick.fitCls}">${pick.fitLabel}</span>`;
+      } else {
+        stub.innerHTML = `<span class="role">${slot}</span><div class="name">—</div>`;
+      }
+      setlistEl.appendChild(stub);
+    });
+  }
 }
 
 
@@ -417,7 +419,7 @@ function renderFinal(){
   let betDisplay = document.getElementById('bet-number');
   let bet = parseInt(betDisplay.value, 10);
   let currentMoney = parseInt(moneyDisplay.textContent, 10);
-  currentMoney = Math.round(currentMoney + (bet**2)/score);
+  currentMoney = Math.round(Math.abs(currentMoney + (bet**2)/(0-score)));
   moneyDisplay.textContent = currentMoney;
   const currentBetDisplay = document.getElementById('current-bet');
   currentBetDisplay.textContent = 0;
@@ -465,11 +467,11 @@ function renderFinal(){
 
 /* ==========================================================================
    I. START THE GAME
-   ========================================================================== */
-
+ ========================================================================== */
 renderSetlist();
 renderScorebar();
 renderRound();
+
 /*=========================================================================
 Adds the buttons as variables so javascript can listen for clicks and perform actions when clicked.
 =========================================================================*/
@@ -498,10 +500,11 @@ wildcardBtn.addEventListener('click', () => {
 rulesBtn.addEventListener('click', () => {
   alert(`Rules:\n\n1. A random band appears on stage.\n2. Click one member. They are auto-assigned to the first open slot that matches their instrument(s).\n3. Earn "fit" points depending on how far down their instrument list the slot was (main instrument = 100, second = 35, Wildcard = -15).\n4. "Chemistry" points are added/subtracted based on who is already in your lineup (vibe clashes and real-life friendships/feuds).\n5. Fill all 7 slots to see your final grade.`);
 });
-
 addToBetBtn.addEventListener('click', () => {
   const betAmountInput = document.getElementById('bet-number');
   const betAmount = parseInt(betAmountInput.value, 10);
+  localStorage.getItem('current_bet', betAmount);
+  localStorage.getItem('current_money', parseInt(document.getElementById('money-amount').value, 10));
   if (isNaN(betAmount) || betAmount <= 0) {
     alert('Please enter a valid bet amount greater than 0.');
     return;
@@ -515,13 +518,12 @@ addToBetBtn.addEventListener('click', () => {
   currentMoney -= betAmount;
   moneyDisplay.textContent = currentMoney;
   alert(`You have placed a bet of ${betAmount}. Your remaining money is ${currentMoney}.`);
-  const currentBetDisplay = document.getElementById('current-bet');
   currentBetDisplay.textContent = parseInt(currentBetDisplay.textContent, 10) + betAmount;
 });
 
 restartBtn.addEventListener('click', () => {
-  if (parseInt(document.getElementById('money-amount').textContent, 10) <= 0) {
-    alert('You have gone bankrupt, the only way out is to sell your soul to the devil.');
+  if (parseInt(document.getElementById('money-amount').textContent, 10) < 100) {
+    alert('You have gone bankrupt or you have no more money left to play, the only way out is to sell your soul to the devil.');
     confirm('Make a deal with the devil?') ? alert('You have sold your soul to the devil, you are now a slave to him.') || window.location.reload() : alert('You have refused to sell your soul to the devil.') || alert("You will not be able to continue the game.");
     window.location.reload();
     return;
@@ -531,3 +533,9 @@ restartBtn.addEventListener('click', () => {
   renderScorebar();
   renderRound();
 });
+if (document.getElementById('current-bet') >= 100) {
+  renderSetlist();  
+  renderScorebar();
+  renderRound();
+}
+
