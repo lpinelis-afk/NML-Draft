@@ -486,6 +486,8 @@ const restartBtn = document.getElementById('restart-btn');
 const rulesBtn = document.getElementById('rules-btn');
 const wildcardBtn = document.getElementById('wildcard-needed-btn');
 const addToBetBtn = document.getElementById('add-to-bet-btn');
+const saveGameBtn = document.getElementById('save-game-btn');
+const loadGameBtn = document.getElementById('load-game-btn');
 
 
 /*=========================================================================
@@ -540,10 +542,31 @@ restartBtn.addEventListener('click', () => {
   renderScorebar();
   renderRound();
 });
+
+saveGameBtn.addEventListener('click', () => {
+  var key = Math.round(Math.random() * 100);
+  var current_money = document.querySelector('#money-amount').textContent;
+  var encrypted_money = parseInt((parseInt(current_money)**2)*key);
+  alert(`Your save key is: ${key}. And your encrypted value is: ${encrypted_money}`);
+});
+
+loadGameBtn.addEventListener('click', () => {
+  var key = document.getElementById("load-key").value;
+  var encrypt_value = document.getElementById("encrypted-value").value;
+  if (parseInt(key)) {
+    if (parseInt(encrypt_value)) {
+      var money = (Math.sqrt(parseInt(encrypt_value)/parseInt(key)));
+      alert(money)
+    } else {
+      alert("Please enter the encrypted value.")
+    }
+  } else {
+    alert("Please input a load key.")
+  }
+});
+
 if (document.getElementById('current-bet') >= 100) {
   renderSetlist();  
   renderScorebar();
   renderRound();
 }
-
-
