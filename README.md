@@ -1,16 +1,18 @@
 # Supergroup Draft
 
-Open `index.html` in a browser to play (no server needed).
+Open `main.html` in a browser to play (no server needed).
 
 ## Files
 
 | File | What it does |
 |---|---|
-| `index.html` | Page skeleton. Loads the CSS and the three scripts. |
+| `main.html` | Home page where you can place bets, loads `home.js` |
+| `index.html` | Game skeleton. Loads the CSS and the three scripts. |
 | `css/style.css` | All styling. Colors are variables at the top (`:root`). |
 | `js/bands.js` | **The band list.** Edit this to add bands. |
 | `js/rules.js` | Chemistry rules: vibe clashes, friendships, feuds. |
 | `js/game.js` | Game logic and screens. Settings (points, rerolls, grades) are at the top. |
+| `js/home.js` | Code for home page, adds functionality to Add-Bet button. |
 
 ## Adding a band
 
