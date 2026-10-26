@@ -36,6 +36,21 @@
 // a vibe that isn't in this list (usually a typo).
 const VIBES = ["aggressive", "classic", "alt", "mellow", "chaotic", "theatrical", "punk"];
 
+async function getArtist(artist) {
+  const url = `https://api.deezer.com/search?q=${artist}`;
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log(result);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
 const BANDS = [
   {name:"Black Sabbath", vibe:"aggressive", members:[["Ozzy Osbourne","Vocals"],["Tony Iommi","Guitar"],["Geezer Butler","Bass"],["Bill Ward","Drums"]]},
   {name:"Led Zeppelin", vibe:"classic", members:[["Robert Plant","Vocals"],["Jimmy Page","Guitar"],["John Paul Jones","Bass/Keys"],["John Bonham","Drums"]]},
@@ -96,3 +111,4 @@ const BANDS = [
   {name:"Handful of Hate", vibe:"aggressive", members:[["Nicola Bianchi","Guitar/Vocals"],["Andrea Toto","Guitar"],["Luca Buti","Bass"],["Aeternus","Drums"]]},
   {name:"Angry Somoans", vibe:"punk", members:[["Mike Saunders","Guitar/Vocals"],["Gregg Turner","Guitar/Vocals"],["P.J. Galligan","Guitar"],["Todd Homer","Bass"],["Bill Vockeroth","Drums"]]},
 ];
+console.log(getArtist("Metallica"));

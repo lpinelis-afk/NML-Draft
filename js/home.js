@@ -1,6 +1,7 @@
 var start_button = document.querySelector('#start-game-btn');
 var current_bet = document.querySelector('#current-bet').textContent;
 const place_bet = document.querySelector('#add-to-bet-btn');
+// make a dictionary to store artists
 localStorage.getItem('current_bet', current_bet);
 if(start_button.getAttribute('value') == 'off'){
     start_button.style.display = 'none';
@@ -26,3 +27,4 @@ place_bet.addEventListener('click', function() {
 } else {
     alert('You must bet at least 100!');
 }});
+
