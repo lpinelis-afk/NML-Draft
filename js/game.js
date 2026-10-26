@@ -546,17 +546,23 @@ restartBtn.addEventListener('click', () => {
 saveGameBtn.addEventListener('click', () => {
   var key = Math.round(Math.random() * 100);
   var current_money = document.querySelector('#money-amount').textContent;
-  var encrypted_money = parseInt((parseInt(current_money)**2)*key);
+  var encrypted_money = parseInt(((parseInt(current_money)**2)*key)/10000);
   alert(`Your save key is: ${key}. And your encrypted value is: ${encrypted_money}`);
 });
 
 loadGameBtn.addEventListener('click', () => {
   var key = document.getElementById("load-key").value;
   var encrypt_value = document.getElementById("encrypted-value").value;
+  var current_money = document.querySelector('#money-amount').textContent;
+  var money;
   if (parseInt(key)) {
     if (parseInt(encrypt_value)) {
-      var money = (Math.sqrt(parseInt(encrypt_value)/parseInt(key)));
-      alert(money)
+      money = Math.round(Math.sqrt((parseInt(encrypt_value)/parseInt(key))*10000));
+      alert(`You have: $${money}`);
+      document.querySelector('#money-amount').textContent = money;
+      document.querySelector('#current-bet').textContent = 0
+      
+
     } else {
       alert("Please enter the encrypted value.")
     }
