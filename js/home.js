@@ -1,5 +1,3 @@
-
-
 var start_button = document.querySelector('#start-game-btn');
 var current_bet = document.querySelector('#current-bet').textContent;
 const place_bet = document.querySelector('#add-to-bet-btn');
@@ -10,6 +8,9 @@ if(start_button.getAttribute('value') == 'off'){
 
 localStorage.setItem('current_bet', current_bet);
 place_bet.addEventListener('click', function() {
+
+
+
     if (document.querySelector('#bet-number').value >= 100) {
         var money = document.querySelector('#money-amount').textContent;
         var bet_value = document.querySelector('#current-bet').textContent;
