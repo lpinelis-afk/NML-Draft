@@ -37,7 +37,7 @@
 const VIBES = ["aggressive", "classic", "alt", "mellow", "chaotic", "theatrical", "punk"];
 
 async function getArtist(artist) {
-  const url = `https://api.deezer.com/search?q=${artist}`;
+  const url = `https://proxy.corsfix.com/?https://api.deezer.com/search?q=artist:"${artist}"`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -111,4 +111,4 @@ const BANDS = [
   {name:"Handful of Hate", vibe:"aggressive", members:[["Nicola Bianchi","Guitar/Vocals"],["Andrea Toto","Guitar"],["Luca Buti","Bass"],["Aeternus","Drums"]]},
   {name:"Angry Somoans", vibe:"punk", members:[["Mike Saunders","Guitar/Vocals"],["Gregg Turner","Guitar/Vocals"],["P.J. Galligan","Guitar"],["Todd Homer","Bass"],["Bill Vockeroth","Drums"]]},
 ];
-console.log(getArtist("Metallica"));
+console.log(getArtist("Pearl Jam"));
