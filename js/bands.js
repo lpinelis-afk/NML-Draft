@@ -1,3 +1,6 @@
+// import {wiki} from '../node_modules/wikipedia/dist/index.js';
+// import { wikiSummary, summaryError } from 'wikipedia';
+// import { summary } from 'wikipedia';
 /* ==========================================================================
    bands.js  --  THE BAND DATABASE
    ==========================================================================
@@ -37,7 +40,7 @@
 const VIBES = ["aggressive", "classic", "alt", "mellow", "chaotic", "theatrical", "punk"];
 
 async function getArtist(artist) {
-  const url = `https://proxy.corsfix.com/?https://api.deezer.com/search?q=artist:"${artist}"`;
+  const url = `https://proxy.corsfix.com/?https://api.deezer.com/search?q=${artist}`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -45,7 +48,7 @@ async function getArtist(artist) {
     }
 
     const result = await response.json();
-    console.log(result);
+    return result;
   } catch (error) {
     console.error(error.message);
   }
@@ -55,7 +58,7 @@ const BANDS = [
   {name:"Black Sabbath", vibe:"aggressive", members:[["Ozzy Osbourne","Vocals"],["Tony Iommi","Guitar"],["Geezer Butler","Bass"],["Bill Ward","Drums"]]},
   {name:"Led Zeppelin", vibe:"classic", members:[["Robert Plant","Vocals"],["Jimmy Page","Guitar"],["John Paul Jones","Bass/Keys"],["John Bonham","Drums"]]},
   {name:"Nirvana", vibe:"alt", members:[["Kurt Cobain","Vocals/Guitar"],["Krist Novoselic","Bass"],["Dave Grohl","Drums"]]},
-  {name:"Queens of the Stone Age", vibe:"alt", members:[["Josh Homme","Vocals/Guitar"],["Nick Oliveri","Bass"],["Troy Van Leeuwen","Guitar"]]},
+  {name:"Queens of the Stone Age", vibe:"alt", members:[["Josh Homme","Vocals/Guitar"],["Nick Oliveri","Bass"],["Troy Van Leeuwen","Guitar"],["Dave Grohl","Drums"]]},
   {name:"System of a Down", vibe:"aggressive", members:[["Serj Tankian","Vocals"],["Daron Malakian","Guitar"],["Shavo Odadjian","Bass"],["John Dolmayan","Drums"]]},
   {name:"Soundgarden", vibe:"alt", members:[["Chris Cornell","Vocals"],["Kim Thayil","Guitar"],["Ben Shepherd","Bass"],["Matt Cameron","Drums"]]},
   {name:"Alice in Chains", vibe:"alt", members:[["Layne Staley","Vocals"],["Jerry Cantrell","Guitar/Vocals"],["Mike Starr","Bass"],["Sean Kinney","Drums"]]},
@@ -110,5 +113,19 @@ const BANDS = [
   {name:"Leningrad", vibe:"chaotic", members:[["Sergey Shnurov","Vocals"],["Vasily Zubkov","Bass"],["Denis Martynov","Trumpet"],["Alexander Galnykin","Trombone"],["Mikhail Kozodaev","Drums"],["Dmitry Gorevoy","Saxophone"],["Viktor Lushnikov","Keys"]]},
   {name:"Handful of Hate", vibe:"aggressive", members:[["Nicola Bianchi","Guitar/Vocals"],["Andrea Toto","Guitar"],["Luca Buti","Bass"],["Aeternus","Drums"]]},
   {name:"Angry Somoans", vibe:"punk", members:[["Mike Saunders","Guitar/Vocals"],["Gregg Turner","Guitar/Vocals"],["P.J. Galligan","Guitar"],["Todd Homer","Bass"],["Bill Vockeroth","Drums"]]},
+  {name:"Acid King", vibe:"aggressive", members:[["Lori S","Vocals/Guitar"],["Bryce Shelton","Bass"],["Jason Willer","Drums"]]},
+  {name:"Melvins", vibe:"aggressive", members:[["Buzz Osborne","Vocals/Guitar"],["Coady Willis","Drums/Vocals"],["Steven Shane McDonald","Bass/Vocals"],["Dale Crover","Drums/Vocals"]]},
+  {name:"Ween", vibe:"chaotic", members:[["Gene Ween","Vocals/Guitar"],["Dean Ween","Guitar/Vocals"],["Glenn McClelland","Keys"],["Claude Coleman Jr.","Drums"],["Dave Dreiwitz","Bass"]]},
+  {name:"Buffalo Springfield", vibe:"classic", members:[["Stephen Stills","Vocals/Guitar"],["Neil Young","Guitar/Vocals"],["Bruce Palmer","Bass"],["Richie Furay","Vocals/Guitar"],["Dewey Martin","Drums"]]},
+  {name:"The Doors", vibe:"classic", members:[["Jim Morrison","Vocals"],["Robby Krieger","Guitar"],["Ray Manzarek","Keys"],["John Densmore","Drums"]]},
+  {name:"The Stooges", vibe:"punk", members:[["Iggy Pop","Vocals"],["Ron Asheton","Guitar"],["Scott Asheton","Drums"],["Dave Alexander","Bass"]]},
+  {name:"The Clash", vibe:"punk", members:[["Joe Strummer","Vocals/Guitar"],["Mick Jones","Guitar/Vocals"],["Paul Simonon","Bass/Vocals"],["Topper Headon","Drums"]]},
+  {name:"The Sex Pistols", vibe:"punk", members:[["Johnny Rotten","Vocals"],["Steve Jones","Guitar"],["Glen Matlock","Bass"],["Paul Cook","Drums"]]},
+  {name:"The Misfits", vibe:"punk", members:[["Glenn Danzig","Vocals"],["Jerry Only","Bass"],["Franché Coma","Guitar"],["Mr. Jim","Drums"]]},
+  {name:"Dozer", vibe:"aggressive", members:[["Fredrik Nordin","Vocals/Guitar"],["Tommi Holappa","Guitar"],["Johan Rockner","Bass"],["Erik Bäckwall","Drums"]]},
+  {name:"Megadeth", vibe:"aggressive", members:[["Dave Mustaine","Vocals/Guitar"],["Kiko Loureiro","Guitar"],["David Ellefson","Bass"],["Dirk Verbeuren","Drums"]]},
+  {name:"Anthrax", vibe:"aggressive", members:[["Joey Belladonna","Vocals"],["Scott Ian","Guitar"],["Frank Bello","Bass"],["Charlie Benante","Drums"]]},
+  {name:"Testament", vibe:"aggressive", members:[["Chuck Billy","Vocals"],["Eric Peterson","Guitar"],["Alex Skolnick","Guitar"],["Steve Di Giorgio","Bass"],["Gene Hoglan","Drums"]]},
+  {name:"The Traveling Wilburys", vibe:"classic", members:[["George Harrison","Guitar/Vocals"],["Bob Dylan","Vocals/Guitar"],["Tom Petty","Vocals/Guitar"],["Jeff Lynne","Guitar/Keys/Vocals"],["Roy Orbison","Vocals"]]}
 ];
-console.log(getArtist("Pearl Jam"));
+

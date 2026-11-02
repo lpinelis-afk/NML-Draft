@@ -1,7 +1,7 @@
 /* ==========================================================================
    game.js  --  GAME LOGIC + RENDERING
    ==========================================================================
-   Depends on two files that must be loaded BEFORE this one (see index.html):
+   Depends on two files that must be loaded BEFORE this one (see main.html):
      bands.js  ->  BANDS, VIBES
      rules.js  ->  CLASH_RULES, RELATIONSHIP_RULES
 
@@ -423,9 +423,19 @@ function renderFinal(){
   const grade = gradeForScore(score);
   let moneyDisplay = document.getElementById('money-amount');
   let betDisplay = document.getElementById('bet-number');
+  let betAmount = parseInt(document.getElementById('current-bet').textContent, 10);
   let bet = parseInt(betDisplay.value, 10);
   let currentMoney = parseInt(moneyDisplay.textContent, 10);
-  currentMoney = Math.round(Math.abs(currentMoney + (bet**2)/(0-score)));
+  if (betAmount == 0) {
+    currentMoney = 0
+  } else {
+    if (score >= 300) {
+      currentMoney = currentMoney + Math.round(((score-betAmount)*(score-betAmount))/(betAmount+1));
+    } else {
+      currentMoney = currentMoney - Math.round(((score-betAmount)*(score-betAmount))/(betAmount+1));
+    }
+    
+  }
   moneyDisplay.textContent = currentMoney;
   const currentBetDisplay = document.getElementById('current-bet');
   currentBetDisplay.textContent = 0;
