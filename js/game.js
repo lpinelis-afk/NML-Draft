@@ -430,9 +430,10 @@ function renderFinal(){
     currentMoney = 0
   } else {
     if (score >= 300) {
-      currentMoney = currentMoney + Math.round(((score-betAmount)*(score-betAmount))/(betAmount+1));
+      currentMoney = currentMoney + Math.round(((score-betAmount)*(score-betAmount))/(score+1));
     } else {
-      currentMoney = currentMoney - Math.round(((score-betAmount)*(score-betAmount))/(betAmount+1));
+      //rework this
+      currentMoney = currentMoney - Math.round(((betAmount-score)*(betAmount-score))/(score+1));
     }
     
   }
@@ -449,8 +450,6 @@ function renderFinal(){
       <div id="clashlog-final"></div>
       <label for="money">Money:</label>
       <label id="money-amount">${currentMoney}</label>
-      
-
     </div>
   `;
 
@@ -541,7 +540,7 @@ addToBetBtn.addEventListener('click', () => {
 });
 
 restartBtn.addEventListener('click', () => {
-  if (parseInt(document.getElementById('money-amount').textContent, 10) < 100) {
+  if (parseInt(document.getElementById('money-amount').textContent, 10) < (0-500)) {
     alert('You have gone bankrupt or you have no more money left to play, the only way out is to sell your soul to the devil.');
     confirm('Make a deal with the devil?') ? alert('You have sold your soul to the devil, you are now a slave to him.') || window.location.reload() : alert('You have refused to sell your soul to the devil.') || alert("You will not be able to continue the game.");
     window.location.reload();

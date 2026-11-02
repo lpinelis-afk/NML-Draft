@@ -126,6 +126,13 @@ const BANDS = [
   {name:"Megadeth", vibe:"aggressive", members:[["Dave Mustaine","Vocals/Guitar"],["Kiko Loureiro","Guitar"],["David Ellefson","Bass"],["Dirk Verbeuren","Drums"]]},
   {name:"Anthrax", vibe:"aggressive", members:[["Joey Belladonna","Vocals"],["Scott Ian","Guitar"],["Frank Bello","Bass"],["Charlie Benante","Drums"]]},
   {name:"Testament", vibe:"aggressive", members:[["Chuck Billy","Vocals"],["Eric Peterson","Guitar"],["Alex Skolnick","Guitar"],["Steve Di Giorgio","Bass"],["Gene Hoglan","Drums"]]},
-  {name:"The Traveling Wilburys", vibe:"classic", members:[["George Harrison","Guitar/Vocals"],["Bob Dylan","Vocals/Guitar"],["Tom Petty","Vocals/Guitar"],["Jeff Lynne","Guitar/Keys/Vocals"],["Roy Orbison","Vocals"]]}
+  {name:"The Traveling Wilburys", vibe:"classic", members:[["George Harrison","Guitar/Vocals"],["Bob Dylan","Vocals/Guitar"],["Tom Petty","Vocals/Guitar"],["Jeff Lynne","Guitar/Keys/Vocals"],["Roy Orbison","Vocals"]]},
+  {name:"The Byrds", vibe:"classic", members:[["Roger McGuinn","Vocals/Guitar"],["David Crosby","Vocals/Guitar"],["Chris Hillman","Bass/Vocals"],["Michael Clarke","Drums"]]},
+  {name:"The Beach Boys", vibe:"classic", members:[["Brian Wilson","Vocals/Keys"],["Mike Love","Vocals"],["Al Jardine","Vocals/Guitar"],["Carl Wilson","Vocals/Guitar"],["Dennis Wilson","Vocals/Drums"]]},
+  {name:"The Kinks", vibe:"classic", members:[["Ray Davies","Vocals/Guitar"],["Dave Davies","Guitar/Vocals"],["Pete Quaife","Bass"],["Mick Avory","Drums"]]},
+  {name:"The Animals", vibe:"classic", members:[["Eric Burdon","Vocals"],["Alan Price","Keys"],["Chas Chandler","Bass"],["Hilton Valentine","Guitar"],["John Steel","Drums"]]},
+  {name:"The Yardbirds", vibe:"classic", members:[["Keith Relf","Vocals"],["Eric Clapton","Guitar"],["Chris Dreja","Guitar"],["Paul Samwell-Smith","Bass"],["Jim McCarty","Drums"]]},
+  {name:"The Zombies", vibe:"classic", members:[["Colin Blunstone","Vocals"],["Rod Argent","Keys/Vocals"],["Chris White","Bass"],["Paul Atkinson","Guitar"],["Hugh Grundy","Drums"]]},
+  {name:"Capital Punishment", vibe:"aggressive", members:[["Ben Stiller","Drums"],["Kriss Roebling","Guitar/Vocals"],["Peter Zusi","Keys/Saxophone/Guitar"],["Peter Swann","Bass"]]}
 ];
 
