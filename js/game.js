@@ -35,7 +35,7 @@ const SLOTS = ["Lead Vocals", "Lead Guitar", "Bass", "Drums", "Keyboards", "Viol
 // and anything further down (including the automatic Wildcard fallback) uses
 // the last entry.
 const FIT_TIERS = [
-  {label:"Perfect Fit",    cls:"perfect",  points:100},
+  {label:"Perfecth Fit",    cls:"perfect",  points:100},
   {label:"Stretch Pick",   cls:"stretch",  points:35},
   {label:"Total Wildcard", cls:"wildcard", points:-15}
 ];
