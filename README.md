@@ -1,6 +1,6 @@
 # Supergroup Draft
 
-Open `main.html` in a browser to play (no server needed).
+Open `index.html` in a browser to play (no server needed).
 
 ## Files
 
