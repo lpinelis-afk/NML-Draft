@@ -145,6 +145,16 @@ const BANDS = [
   {name:"Electric Light Orchestra", vibe:"classic", members:[["Jeff Lynne","Vocals/Guitar"],["Richard Tandy","Keys"],["Bev Bevan","Drums"],["Kelly Groucutt","Bass/Vocals"]]},
   {name:"Yes", vibe:"classic", members:[["Jon Anderson","Vocals"],["Steve Howe","Guitar"],["Chris Squire","Bass/Vocals"],["Rick Wakeman","Keys"],["Alan White","Drums"]]},
   {name:"Genesis", vibe:"classic", members:[["Phil Collins","Vocals/Drums"],["Tony Banks","Keys"],["Mike Rutherford","Guitar/Bass"],["Steve Hackett","Guitar"]]},
-  {name:"King Crimson", vibe:"classic", members:[["Robert Fripp","Guitar"],["Adrian Belew","Guitar/Vocals"],["Tony Levin","Bass/Chapman Stick"],["Pat Mastelotto","Drums"]]}
+  {name:"King Crimson", vibe:"classic", members:[["Robert Fripp","Guitar"],["Adrian Belew","Guitar/Vocals"],["Tony Levin","Bass/Chapman Stick"],["Pat Mastelotto","Drums"]]},
+  {name:"Okilly Dokilly", vibe:"chaotic", members:[["Head Ned","Vocals/Guitar"],["Shred Ned","Guitar"],["Zed Ned","Keys"],["Dread Ned","Drums"],["Red Ned","Bass"]]},
+  {name:"The Eagles", vibe:"classic", members:[["Don Henley","Vocals/Drums"],["Glenn Frey","Guitar/Vocals"],["Joe Walsh","Guitar/Vocals"],["Timothy B. Schmit","Bass/Vocals"]]},
+  {name:"Animals As Leaders", vibe:"aggressive", members:[["Tosin Abasi","Guitar"],["Sacha Dunable","Guitar/Vocals"],["Matt Garstka","Drums"],["Navene Koperweis","Bass"]]},
+  {name:"The White Stripes", vibe:"alt", members:[["Jack White","Vocals/Guitar"],["Meg White","Drums"]]},
+  {name:"DragonForce", vibe:"theatrical", members:[["Henning Basse","Vocals"],["Oli Brown","Guitar"],["Jonas Heidgert","Guitar"],["Samy Saemann","Bass"],["Ferdinand Rewicki","Drums"]]},
+  {name:"Killswitch Engage", vibe:"aggressive", members:[["Jesse Leach","Vocals"],["Adam Dutkiewicz","Guitar/Vocals"],["Joel Stroetzel","Guitar"],["Mike D'Antonio","Bass"],["Justin Foley","Drums"]]},
+  {name:"Social Distortion", vibe:"punk", members:[["Mike Ness","Vocals/Guitar"],["Jonny Wickersham","Guitar/Vocals"],["John Maurer","Bass"],["David Hidalgo Jr.","Drums"]]},
+  {name:"Helloween", vibe:"theatrical", members:[["Andi Deris","Vocals"],["Michael Weikath","Guitar"],["Sascha Gerstner","Guitar"],["Markus Grosskopf","Bass"],["Daniel Löble","Drums"]]},
+  {name:"Foghat", vibe:"classic", members:[["Dave Peverett","Vocals/Guitar"],["Rod Price","Guitar"],["Craig MacGregor","Bass"],["Roger Earl","Drums"]]},
+  {name:"Silverchair", vibe:"alt", members:[["Daniel Johns","Vocals/Guitar"],["Ben Gillies","Drums"],["Chris Joannou","Bass"]]},
 ];
 
