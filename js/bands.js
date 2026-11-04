@@ -143,5 +143,8 @@ const BANDS = [
   {name:"New Order", vibe:"alt", members:[["Bernard Sumner","Vocals/Guitar/Keys"],["Peter Hook","Bass/Vocals"],["Stephen Morris","Drums/Keys"],["Gillian Gilbert","Keys/Guitar"]]},
   {name:"The Smiths", vibe:"alt", members:[["Morrissey","Vocals"],["Johnny Marr","Guitar"],["Andy Rourke","Bass"],["Mike Joyce","Drums"]]},
   {name:"Electric Light Orchestra", vibe:"classic", members:[["Jeff Lynne","Vocals/Guitar"],["Richard Tandy","Keys"],["Bev Bevan","Drums"],["Kelly Groucutt","Bass/Vocals"]]},
+  {name:"Yes", vibe:"classic", members:[["Jon Anderson","Vocals"],["Steve Howe","Guitar"],["Chris Squire","Bass/Vocals"],["Rick Wakeman","Keys"],["Alan White","Drums"]]},
+  {name:"Genesis", vibe:"classic", members:[["Phil Collins","Vocals/Drums"],["Tony Banks","Keys"],["Mike Rutherford","Guitar/Bass"],["Steve Hackett","Guitar"]]},
+  {name:"King Crimson", vibe:"classic", members:[["Robert Fripp","Guitar"],["Adrian Belew","Guitar/Vocals"],["Tony Levin","Bass/Chapman Stick"],["Pat Mastelotto","Drums"]]}
 ];
 
