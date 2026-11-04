@@ -6,8 +6,8 @@ Open `main.html` in a browser to play (no server needed).
 
 | File | What it does |
 |---|---|
-| `main.html` | Home page where you can place bets, loads `home.js` |
-| `index.html` | Game skeleton. Loads the CSS and the three scripts. |
+| `index.html` | Home page where you can place bets, loads `home.js` |
+| `main.html` | Game skeleton. Loads the CSS and the three scripts. |
 | `css/style.css` | All styling. Colors are variables at the top (`:root`). |
 | `js/bands.js` | **The band list.** Edit this to add bands. |
 | `js/rules.js` | Chemistry rules: vibe clashes, friendships, feuds. |
