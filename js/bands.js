@@ -143,7 +143,6 @@ const BANDS = [
   {name:"New Order", vibe:"alt", members:[["Bernard Sumner","Vocals/Guitar/Keys"],["Peter Hook","Bass/Vocals"],["Stephen Morris","Drums/Keys"],["Gillian Gilbert","Keys/Guitar"]]},
   {name:"The Smiths", vibe:"alt", members:[["Morrissey","Vocals"],["Johnny Marr","Guitar"],["Andy Rourke","Bass"],["Mike Joyce","Drums"]]},
   {name:"Electric Light Orchestra", vibe:"classic", members:[["Jeff Lynne","Vocals/Guitar"],["Richard Tandy","Keys"],["Bev Bevan","Drums"],["Kelly Groucutt","Bass/Vocals"]]},
-  {name:"Yes", vibe:"classic", members:[["Jon Anderson","Vocals"],["Steve Howe","Guitar"],["Chris Squire","Bass/Vocals"],["Rick Wakeman","Keys"],["Alan White","Drums"]]},
   {name:"Genesis", vibe:"classic", members:[["Phil Collins","Vocals/Drums"],["Tony Banks","Keys"],["Mike Rutherford","Guitar/Bass"],["Steve Hackett","Guitar"]]},
   {name:"King Crimson", vibe:"classic", members:[["Robert Fripp","Guitar"],["Adrian Belew","Guitar/Vocals"],["Tony Levin","Bass/Chapman Stick"],["Pat Mastelotto","Drums"]]},
   {name:"Okilly Dokilly", vibe:"chaotic", members:[["Head Ned","Vocals/Guitar"],["Shred Ned","Guitar"],["Zed Ned","Keys"],["Dread Ned","Drums"],["Red Ned","Bass"]]},
@@ -156,5 +155,6 @@ const BANDS = [
   {name:"Helloween", vibe:"theatrical", members:[["Andi Deris","Vocals"],["Michael Weikath","Guitar"],["Sascha Gerstner","Guitar"],["Markus Grosskopf","Bass"],["Daniel Löble","Drums"]]},
   {name:"Foghat", vibe:"classic", members:[["Dave Peverett","Vocals/Guitar"],["Rod Price","Guitar"],["Craig MacGregor","Bass"],["Roger Earl","Drums"]]},
   {name:"Silverchair", vibe:"alt", members:[["Daniel Johns","Vocals/Guitar"],["Ben Gillies","Drums"],["Chris Joannou","Bass"]]},
+  {name:"King Gizzard & the Lizard Wizard", vibe:"chaotic", members:[["Stu Mackenzie","Vocals/Guitar"],["Ambrose Kenny-Smith","Keys/Vocals"],["Joey Walker","Guitar/Vocals"],["Cook Craig","Guitar/Vocals"],["Lucas Skinner","Bass"],["Michael Cavanagh","Drums"]]}
 ];
 
