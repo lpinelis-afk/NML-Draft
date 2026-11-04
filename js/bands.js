@@ -133,6 +133,15 @@ const BANDS = [
   {name:"The Animals", vibe:"classic", members:[["Eric Burdon","Vocals"],["Alan Price","Keys"],["Chas Chandler","Bass"],["Hilton Valentine","Guitar"],["John Steel","Drums"]]},
   {name:"The Yardbirds", vibe:"classic", members:[["Keith Relf","Vocals"],["Eric Clapton","Guitar"],["Chris Dreja","Guitar"],["Paul Samwell-Smith","Bass"],["Jim McCarty","Drums"]]},
   {name:"The Zombies", vibe:"classic", members:[["Colin Blunstone","Vocals"],["Rod Argent","Keys/Vocals"],["Chris White","Bass"],["Paul Atkinson","Guitar"],["Hugh Grundy","Drums"]]},
-  {name:"Capital Punishment", vibe:"aggressive", members:[["Ben Stiller","Drums"],["Kriss Roebling","Guitar/Vocals"],["Peter Zusi","Keys/Saxophone/Guitar"],["Peter Swann","Bass"]]}
+  {name:"Capital Punishment", vibe:"aggressive", members:[["Ben Stiller","Drums"],["Kriss Roebling","Guitar/Vocals"],["Peter Zusi","Keys/Saxophone/Guitar"],["Peter Swann","Bass"]]},
+  {name:"Pixies", vibe:"alt", members:[["Black Francis","Vocals/Guitar"],["Joey Santiago","Guitar"],["Kim Deal","Bass/Vocals"],["David Lovering","Drums"]]},
+  {name:"The Strokes", vibe:"alt", members:[["Julian Casablancas","Vocals"],["Nick Valensi","Guitar"],["Albert Hammond Jr.","Guitar"],["Nikolai Fraiture","Bass"],["Fabrizio Moretti","Drums"]]},
+  {name:"Vampire Weekend", vibe:"alt", members:[["Ezra Koenig","Vocals/Guitar"],["Chris Baio","Bass"],["Chris Tomson","Drums"],["Rostam Batmanglij","Keys/Guitar"]]},
+  {name:"Joy Division", vibe:"alt", members:[["Ian Curtis","Vocals"],["Bernard Sumner","Guitar/Keys"],["Peter Hook","Bass"],["Stephen Morris","Drums"]]},
+  {name:"The Cure", vibe:"alt", members:[["Robert Smith","Vocals/Guitar"],["Simon Gallup","Bass"],["Roger O'Donnell","Keys"],["Jason Cooper","Drums"]]},
+  {name:"Depeche Mode", vibe:"alt", members:[["Dave Gahan","Vocals"],["Martin Gore","Guitar/Keys/Vocals"],["Andrew Fletcher","Keys"],["Alan Wilder","Keys/Drums"]]},
+  {name:"New Order", vibe:"alt", members:[["Bernard Sumner","Vocals/Guitar/Keys"],["Peter Hook","Bass/Vocals"],["Stephen Morris","Drums/Keys"],["Gillian Gilbert","Keys/Guitar"]]},
+  {name:"The Smiths", vibe:"alt", members:[["Morrissey","Vocals"],["Johnny Marr","Guitar"],["Andy Rourke","Bass"],["Mike Joyce","Drums"]]},
+  {name:"Electric Light Orchestra", vibe:"classic", members:[["Jeff Lynne","Vocals/Guitar"],["Richard Tandy","Keys"],["Bev Bevan","Drums"],["Kelly Groucutt","Bass/Vocals"]]},
 ];
 
